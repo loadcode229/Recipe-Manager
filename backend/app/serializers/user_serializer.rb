@@ -8,7 +8,7 @@ class UserSerializer
         options = {
             include: {
                 recipes: {
-                    only: [:title, :prep_time, :cook_time, :id, :user_id]
+                    only: [:title, :status, :prep_time, :cook_time, :ingredients, :directions, :id, :user_id]
                 }
             },
             except: [:updated_at],
