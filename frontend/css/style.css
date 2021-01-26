@@ -97,11 +97,26 @@ body {
 }
 
 #add-new-user {
-
+    border-radius: 3px 8px;
+    border: #E8E2DB solid 2px;
+    font-size: 24px;
+    height: auto;
+    width: auto;
+    border: #F5564E;
+    background: #F5564E;
+    box-shadow: 3px 4px #E8E2DB;
+    padding: 12px 28px;
+    margin-left: 50px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    color: #E8E2DB;
+    font-family: Georgia, serif;
 }
 
 #add-new-user button {
-
+    color: #E8E2DB;
+    background: #F5564E;
 }
 
 #new-recipe-btn {
