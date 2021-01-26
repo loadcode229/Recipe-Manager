@@ -6471,3 +6471,708 @@ Processing by UsersController#index as */*
 Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 3440)
 
 
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:34:37 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 32ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 17254)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:34:38 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 3458)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:34:38 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 3440)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:36:23 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 3458)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2021-01-26 11:39:13 -0500
+Processing by RecipesController#create as JSON
+  Parameters: {"title"=>"BLT", "status"=>"Incomplete", "cook_time"=>"30", "prep_time"=>"10", "directions"=>"First, get as many pieces of bacon as you want cooking on a skillet. While that's cooking, start prepping the lettuce and tomatoes. By then, flip that bacon, get it crispy. Toast your bread. Add your B, L, and T. Add some garlic aioli and salt and pepper. Perfection.", "ingredients"=>"", "user_id"=>"5", "recipe"=>{"title"=>"BLT", "ingredients"=>"", "directions"=>"First, get as many pieces of bacon as you want cooking on a skillet. While that's cooking, start prepping the lettuce and tomatoes. By then, flip that bacon, get it crispy. Toast your bread. Add your B, L, and T. Add some garlic aioli and salt and pepper. Perfection.", "cook_time"=>"30", "prep_time"=>"10", "status"=>"Incomplete", "user_id"=>"5"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recipes_controller.rb:16:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:16:in `create'
+  [1m[36mRecipe Create (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "ingredients", "directions", "cook_time", "prep_time", "status", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "BLT"], ["ingredients", ""], ["directions", "First, get as many pieces of bacon as you want cooking on a skillet. While that's cooking, start prepping the lettuce and tomatoes. By then, flip that bacon, get it crispy. Toast your bread. Add your B, L, and T. Add some garlic aioli and salt and pepper. Perfection."], ["cook_time", 30], ["prep_time", 10], ["status", "Incomplete"], ["user_id", 5], ["created_at", "2021-01-26 16:39:13.024907"], ["updated_at", "2021-01-26 16:39:13.024907"]]
+  ↳ app/controllers/recipes_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (90.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recipes_controller.rb:16:in `create'
+Completed 200 OK in 118ms (Views: 0.9ms | ActiveRecord: 91.3ms | Allocations: 6483)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:39:19 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 3602)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:40:54 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:40:54 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:40:55 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:44:07 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:44:08 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:44:08 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 15ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:44:08 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:44:08 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:45:03 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 3584)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:45:33 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:45:33 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:45:34 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:45:53 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:46:39 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:46:54 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:46:54 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:46:54 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:47:45 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:47:46 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 3584)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:47:46 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:48:09 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:48:37 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:48:58 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:48:59 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:48:59 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:51:07 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:51:07 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:51:07 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 3584)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:52:25 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:52:25 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:52:25 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:52:26 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:52:26 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:52:26 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:52:53 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:52:53 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 3586)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:52:54 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:53:08 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3584)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:53:08 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:53:08 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:54:57 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:54:57 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:54:58 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:54:58 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:55:18 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:55:19 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:55:19 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3584)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-01-26 11:55:19 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/serializers/user_serializer.rb:16:in `to_serialized_json'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3583)
+
+

@@ -54,10 +54,11 @@ body {
     box-shadow: 3px 4px #FAB95B;
     border-radius: 15px 40px;
     text-align: center;
-    border: grey solid 2px;
+    border: #E8E2DB solid 2px;
     padding: 20px;
     width: 200px;
-    height: auto;
+    height: 650px;
+    color: #75736f;
     display: inline-grid;
     margin: 1rem 2rem;
     background-color: #FAB95B;
@@ -89,11 +90,31 @@ body {
 }
 
 .reset-recipe-button {
-
+    background-color: #FAB95B;
+    border-radius: 3px 8px;
+    color: #E8E2DB;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    height: auto;
+    width: auto;
+    cursor: pointer;
 }
 
-.delete-recipe-button {
-
+.delete-recipe-btn {
+    background-color: #FAB95B;
+    border-radius: 3px 8px;
+    color: #FFFFFF;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    height: auto;
+    width: auto;
+    cursor: pointer;
 }
 
 #add-new-user {
