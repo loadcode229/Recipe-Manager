@@ -1,0 +1,161 @@
+html {
+    font-family: "Titillium Web", sans-serif;
+}
+
+body {
+    background: #1A3263;
+}
+
+.container {
+    box-shadow: 3px 4px #F5564E;
+    border-radius: 6px 16px;
+    padding: 1rem;
+    width: 420px;
+    height: auto;
+    display: none;
+    background: #F5564E;
+    opacity: .9;
+    color: #E8E2DB;
+    font-family: Georgia, serif;
+}
+
+#user-pop-up {
+    box-shadow: 3px 4px #F5564E;
+    border-radius: 6px 16px;
+    padding: 1rem;
+    width: 420px;
+    height: auto;
+    display: none;
+    background: #F5564E;
+    opacity: .9;
+    margin: 1rem 2rem;
+    text-shadow: 1px .5px #F5564E;
+    color: #E8E2DB;
+    font-family: Georgia, serif;
+    
+}
+
+.user-selector {
+    box-shadow: 3px 4px #F5564E;
+    border-radius: 6px 16px;
+    padding: 1rem;
+    width: 420px;
+    height: auto;
+    display: none;
+    background: #F5564E;
+    opacity: .9;
+    margin: 1rem 2rem;
+    text-shadow: .5px .5px #F5564E;
+    color: #E8E2DB;
+    font-family: Georgia, serif;
+}
+
+.card {
+    box-shadow: 3px 4px #FAB95B;
+    border-radius: 15px 40px;
+    text-align: center;
+    border: grey solid 2px;
+    padding: 20px;
+    width: 200px;
+    height: auto;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    background-color: #FAB95B;
+    font-family: Georgia, serif;
+}
+
+.recipe-status {
+    font-size: larger;
+    font-family: Georgia, serif;
+}
+
+.add-recipe-form {
+    width: 80%;
+    font-family: Georgia, serif;
+}
+
+.complete-btn {
+    background-color: #FAB95B;
+    border-radius: 3px 8px;
+    color: #FFFFFF;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    height: auto;
+    width: auto;
+    cursor: pointer;
+}
+
+.reset-recipe-button {
+
+}
+
+.delete-recipe-button {
+
+}
+
+#add-new-user {
+
+}
+
+#add-new-user button {
+
+}
+
+#new-recipe-btn {
+    border-radius: 3px 8px;
+    font-size: 24px;
+    height: auto;
+    width: auto;
+    border: #E8E2DB;
+    border: 2px;
+    background: #F5564E;
+    box-shadow: 3px 4px #E8E2DB;
+    padding: 12px 28px;
+    margin-left: 50px;
+    margin-top: 15px;
+    cursor: pointer;
+    color: #E8E2DB;
+    font-family: Georgia, serif;
+}
+
+#all-user-options {
+    border-radius: 3px 8px;
+    font-size: 24px;
+    height: auto;
+    width: auto;
+    border: #E8E2DB;
+    border: 2px;
+    background: #F5564E;
+    box-shadow: 3px 4px #E8E2DB;
+    padding: 12px 28px;
+    margin-left: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #E8E2DB;
+    font-family: Georgia, serif;
+}
+
+#tag-line {
+    text-align: center;
+    text-shadow: 2px 2px #1A3263;
+    color: #E8E2DB;
+    font-family: Georgia, serif;
+    opacity: .5;
+    font-size: 24px;
+}
+
+#user-recipe-list {
+    text-align: center;
+    text-shadow: 2px 2px #1A3263;
+    color: #E8E2DB;
+    font-family: Georgia, serif;
+    opacity: .5;
+    font-size: 28px;
+}
+
+#submit-form {
+    border-radius: 3px 8px;
+}

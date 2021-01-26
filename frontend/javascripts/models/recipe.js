@@ -2,17 +2,25 @@ class Recipe {
 
     static all = []
 
-    constructor(title, status='Incomplete', id) {
+    constructor(title, status='Incomplete', cook_time, prep_time, directions, ingredients, id) {
         this.title = title
         this.status = status
+        this.cook_time = cook_time
+        this.prep_time = prep_time
+        this.directions = directions
+        this.ingredients = ingredients
         this.id = id
-        Recipe.call.push(this)
+        Recipe.all.push(this)
     }
 
     static postRecipe(recipeData) {
         let formData = {
             "title": recipeData.title.value,
             "status": recipeData.status = "Incomplete",
+            "cook_time": recipeData.cook_time.value,
+            "prep_time": recipeData.prep_time.value,
+            "directions": recipeData.directions.value,
+            "ingredients": recipeData.ingredients.value,
             "user_id": recipeData.querySelector('select').value
         }
 
@@ -41,10 +49,18 @@ class Recipe {
         h2.innerHTML = `<strong>${this.title}</strong>`
 
         let h3 = document.createElement('h3')
-        h3.innerHTML = '<em>Status: </em>'
+        h3.innerHTML = '<em>Status: ♡ </em>'
+
+        let h4 = document.createElement('h4')
+        h4.innerHTML = `<strong>${this.cook_time} minutes | ${this.prep_time} minutes`
+
+        let tbody = document.createElement('tbody')
+        tbody.innerHTML = `${this.directions}`
+        
         let p = document.createElement('p')
         p.setAttribute('class', 'recipe-status')
         p.innerHTML = `${this.status}`
+        
 
         let completeBtn = document.createElement('button')
         completeBtn.setAttribute('class', 'complete-btn')
@@ -72,13 +88,13 @@ class Recipe {
         let divCard = document.createElement('div')
         divCard.setAttribute('class', 'card')
         divCard.setAttribute('id', `${this.id}`)
-        divCard.append(h2, h3, p, completeBtn, resetBtn, deleteBtn)
+        divCard.append(h2, h3, h4, tbody, p, completeBtn, resetBtn, deleteBtn)
         recipeCollection.append(divCard)
     }
 
     static renderRecipes(recipes) {
         recipes.forEach(recipeObj => {
-            let newObj = new Recipe(recipeObj.title, recipeObj.status, recipeObj.id)
+            let newObj = new Recipe(recipeObj.title, recipeObj.status, recipeObj.cook_time, recipeObj.prep_time, recipeObj.directions, recipeObj.ingredients, recipeObj.id)
             newObj.render()
         })
     }
@@ -86,10 +102,10 @@ class Recipe {
     deleteRecipeHandler() {
         event.preventDefault()
         fetch(`${Api.RECIPES_URL}/${this.id}`,{
-            method: "DELETE"
+            method: 'DELETE'
         })
         .then(() => {
-            document.getElementsById(`${this.id}`).remove()
+            document.getElementById(`${this.id}`).remove()
             Recipe.all = Recipe.all.filter(recipe => recipe.id !== this.id)
         })
     }

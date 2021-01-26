@@ -23,9 +23,9 @@ addUserBtn.addEventListener('click', () => {
     if (addUser) {
         addUserBtn.textContent = "Close"
         userPopUp.style.display = 'block'
-        userPopUp.addEventListener('submit', e => {
-            e.preventDefault()
-            User.postUser(e.target)
+        userPopUp.addEventListener('submit', event => {
+            event.preventDefault()
+            User.postUser(event.target)
         })
     } else {
         addUserBtn.textContent = "Add a new User"
@@ -38,9 +38,9 @@ selectUserBtn.addEventListener('click', () => {
     if (selectUser) {
         selectUserBtn.textContent = 'Close'
         selectForm.style.display = 'block'
-        selectForm.addEventListener('submit', e => {
-            e.preventDefault()
-            let userId = e.target.querySelector('#user-select').value
+        selectForm.addEventListener('submit', event => {
+            event.preventDefault()
+            let userId = event.target.querySelector('#user-select').value
             let chosenUser = User.all.find(chosenUser => userId == chosenUser.id)
             clearRecipeDivs()
             chosenUser.renderRecipes()
@@ -56,9 +56,9 @@ addBtn.addEventListener('click', () => {
     if (addRecipe) {
         addBtn.textContent = 'Close'
         recipeForm.style.display = 'block'
-        recipeForm.addEventListener('submit', e => {
-            e.preventDefault()
-            Recipe.postRecipe(e.target)
+        recipeForm.addEventListener('submit', event => {
+            event.preventDefault()
+            Recipe.postRecipe(event.target)
         })
     } else {
         addBtn.textContent = "Add a new Recipe!"

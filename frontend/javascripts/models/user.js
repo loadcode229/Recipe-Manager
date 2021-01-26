@@ -10,7 +10,7 @@ class User {
     }
 
     addRecipe(recipe) {
-        let r = new Recipe(recipe.title, recipe.status, recipe.prep_time, recipe.cook_time, recipe.ingredients, recipe.directions, recipe.id)
+        let r = new Recipe(recipe.title, recipe.status, recipe.prep_time, recipe.cook_time, recipe.directions, recipe.ingredients, recipe.id)
         this.recipes.push(r)
     }
 
@@ -54,7 +54,7 @@ class User {
             option.setAttribute('value', user.id)
             let user_name = document.createTextNode(user.name)
             option.appendChild(user_name)
-            selectUsers.appendChild(option)
+            selectWhichUser.appendChild(option)
         })
     }
 

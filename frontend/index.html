@@ -12,7 +12,7 @@
 
     </div>
     <br>
-    <h3 id='tag-line'>The virtual recipe assistant built for you and yours.</h3>
+    <h3 id='tag-line'>The virtual recipe assistant built for you and others in your house hold.</h3>
 
     <div class="user-selector">
         <form class="select-user-form">
@@ -23,20 +23,29 @@
         <input type="submit" name="submit" value="See Your User's Recipes" class="submit">
     </form>
     </div>
+    <br>
     <button id="all-user-options"></button>
 
 
 
     <div class="container">
         <form class="add-recipe-form">
-            <h3> Add a Recipe to your To-Do List</h3>
+            <h3> Add a Recipe to your Recipe List:</h3>
 
             <input type="text" name="title" value="" placeholder="Enter a recipe's title..." class="input-text">
-           
+            <br>
+            <p><input type="text" name="cook_time" value="" placeholder="Enter a recipe cook time..." class="input-text">minutes</p>
+            <p><input type="text" name="prep_time" value="" placeholder="Enter a recipe prep time..." class="input-text">minutes</p>
+            <ul>
+                <li><input type="text" name="ingredients" value="" placeholder="Enter a recipe ingredients..." class="input-text"></li>
+                <li><input type="text" name="ingredients" value="" placeholder="Enter a recipe ingredients..." class="input-text"></li>
+                <button id='new-ingredient-btn' style='text-align:center'></button>
+            </ul>
+            <textarea type="text" name="directions" value="" placeholder="Enter a recipe directions..." class="input-text"></textarea>
+            <br>
             <select id="select">
                 
             </select>
-
             <input type="submit" name="submit" value="Save Recipe" class="submit">
         
         </form>
@@ -47,9 +56,9 @@
     
     
     <div id='user-pop-up'>
-        <form class="add-user-form" style="">
+        <form class="add-user-form">
                 <h3>Create new User</h3>
-                <label for="user">User Name:</label>
+                <label for="user">Name:</label>
                 <br>
                 <input type="text" name="name" value="" placeholder="Gordon Ramsey" class="user-input-text">
                 <br>
