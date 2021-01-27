@@ -2,7 +2,6 @@
 
 const parseJSON = response => response.json()
 const addBtn = document.getElementById('new-recipe-btn')
-const ingredientButton = document.getElementById('new-ingredient-btn')
 const recipeForm = document.querySelector('.container')
 const recipeCollection = document.querySelector("#recipe-collection")
 const userRecipesBelongTo = document.getElementById('user-recipe-list')
@@ -15,6 +14,7 @@ const userSelectionPopUp = document.querySelector('.user-selector')
 const selectWhichUser = document.getElementById('user-select')
 const selectForm = document.querySelector('.user-selector')
 const select = document.querySelector("#select")
+
 
 let addRecipe = false
 let addUser = false

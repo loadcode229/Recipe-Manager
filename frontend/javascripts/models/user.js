@@ -10,7 +10,7 @@ class User {
     }
 
     addRecipe(recipe) {
-        let r = new Recipe(recipe.title, recipe.status, recipe.prep_time, recipe.cook_time, recipe.directions, recipe.ingredients, recipe.id)
+        let r = new Recipe(recipe.title, recipe.status, recipe.prep_time, recipe.cook_time, recipe.directions, recipe.id)
         this.recipes.push(r)
     }
 

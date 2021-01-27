@@ -4,6 +4,7 @@ html {
 
 body {
     background: #1A3263;
+    color: #E8E2DB;
 }
 
 .container {
@@ -54,10 +55,10 @@ body {
     box-shadow: 3px 4px #FAB95B;
     border-radius: 15px 40px;
     text-align: center;
-    border: #E8E2DB solid 2px;
+    border: #75736f solid 2px;
     padding: 20px;
-    width: 200px;
-    height: 650px;
+    width: 250px;
+    height: 450px;
     color: #75736f;
     display: inline-grid;
     margin: 1rem 2rem;
@@ -75,45 +76,31 @@ body {
     font-family: Georgia, serif;
 }
 
-.complete-btn {
+.like-recipe-btn {
     background-color: #FAB95B;
     border-radius: 3px 8px;
-    color: #FFFFFF;
-    position: relative;
+    color: #75736f;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: table;
+    vertical-align: bottom;
     font-size: 14px;
-    height: auto;
-    width: auto;
-    cursor: pointer;
-}
-
-.reset-recipe-button {
-    background-color: #FAB95B;
-    border-radius: 3px 8px;
-    color: #E8E2DB;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    height: auto;
-    width: auto;
+    height: 50px;
+    width: 240px;
     cursor: pointer;
 }
 
 .delete-recipe-btn {
     background-color: #FAB95B;
     border-radius: 3px 8px;
-    color: #FFFFFF;
-    position: relative;
+    color: #75736f;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: table;
+    vertical-align: bottom;
     font-size: 14px;
-    height: auto;
-    width: auto;
+    height: 50px;
+    width: 240px;
     cursor: pointer;
 }
 
@@ -133,11 +120,6 @@ body {
     cursor: pointer;
     color: #E8E2DB;
     font-family: Georgia, serif;
-}
-
-#add-new-user button {
-    color: #E8E2DB;
-    background: #F5564E;
 }
 
 #new-recipe-btn {
@@ -192,6 +174,34 @@ body {
     font-size: 28px;
 }
 
-#submit-form {
+.submit-form {
     border-radius: 3px 8px;
+    color: #1A3263;
+}
+
+.submit {
+    border-radius: 3px 8px;
+    color: #1A3263;
+}
+
+#select {
+    border-radius: 3px 8px;
+    color: #1A3263;
+}
+
+#user-select {
+    border-radius: 3px 8px;
+    color: #1A3263;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+tbody {
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+    resize: none;
+    overflow-y: scroll;
 }
