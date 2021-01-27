@@ -2,7 +2,7 @@ class Recipe {
 
     static all = []
 
-    constructor(title, status='Like', cook_time, prep_time, directions, id) {
+    constructor(title, status='', cook_time, prep_time, directions, id) {
         this.title = title
         this.status = status
         this.cook_time = cook_time
@@ -15,7 +15,7 @@ class Recipe {
     static postRecipe(recipeData) {
         let formData = {
             "title": recipeData.title.value,
-            "status": recipeData.status = 'Like',
+            "status": recipeData.status = '',
             "cook_time": recipeData.cook_time.value,
             "prep_time": recipeData.prep_time.value,
             "directions": recipeData.directions.value,
@@ -51,6 +51,10 @@ class Recipe {
         
         let tbody = document.createElement('tbody')
         tbody.innerHTML = `${this.directions}`
+
+        let p = document.createElement('p')
+        p.setAttribute('class', 'recipe-status')
+        p.innerHTML = `${this.status}`
         
         let deleteBtn = document.createElement('button')
         deleteBtn.setAttribute('class', 'delete-recipe-btn')
@@ -59,17 +63,13 @@ class Recipe {
         
         let unlikeBtn = document.createElement('button')
         unlikeBtn.setAttribute('class', 'unlike-recipe-btn')
-        unlikeBtn.innerText = 'Unlike!'
+        unlikeBtn.innerHTML = 'Unlike!'
         unlikeBtn.addEventListener('click', event => this.unlikeHandler(event, this))
 
         let likeBtn = document.createElement('button')
         likeBtn.setAttribute('class', 'like-recipe-btn')
-        likeBtn.innerText = 'Like'
+        likeBtn.innerHTML = 'Like'
         likeBtn.addEventListener('click', event => this.likeHandler(event, this))
-
-        let p = document.createElement('p')
-        p.setAttribute('class', 'recipe-status')
-        p.innerHTML = `${this.status}`
 
         if (p.innerHTML === 'Not liked') {
             p.style.color = 'red'
@@ -82,7 +82,7 @@ class Recipe {
         let divCard = document.createElement('div')
         divCard.setAttribute('class', 'card')
         divCard.setAttribute('id', `${this.id}`)
-        divCard.append(h2, h4, p, tbody, unlikeBtn, likeBtn, deleteBtn)
+        divCard.append(h2, h4, tbody, p, unlikeBtn, likeBtn, deleteBtn)
         recipeCollection.append(divCard)
     }
 

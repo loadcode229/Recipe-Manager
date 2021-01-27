@@ -76,6 +76,20 @@ body {
     font-family: Georgia, serif;
 }
 
+.unlike-recipe-btn {
+    background-color: #FAB95B;
+    border-radius: 3px 8px;
+    color: #75736f;
+    text-align: center;
+    text-decoration: none;
+    display: table;
+    vertical-align: bottom;
+    font-size: 14px;
+    height: 50px;
+    width: 240px;
+    cursor: pointer;
+}
+
 .like-recipe-btn {
     background-color: #FAB95B;
     border-radius: 3px 8px;
