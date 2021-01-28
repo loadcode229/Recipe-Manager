@@ -5,6 +5,7 @@ html {
 body {
     background: #C96567;
     color: #E8E2DB;
+    border: solid #314455 2px;
 }
 
 .container {
@@ -208,6 +209,12 @@ body {
     color: #C96567;
 }
 
+h1 {
+    text-align: center;
+    color: #97AABD;
+    text-decoration: underline;
+}
+
 h2 {
     text-decoration: underline;
 }
@@ -218,4 +225,8 @@ tbody {
     font-weight: normal;
     resize: none;
     overflow-y: scroll;
+}
+
+#recipe-collection {
+    border: solid #314455 2px;
 }

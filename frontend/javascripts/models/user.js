@@ -43,7 +43,7 @@ class User {
             })
             .then(clearNewUserForm)
             .then(clearUserDD)
-            .then(clearNewRecipe)
+            .then(clearForm)
             .then(User.renderDropDownOptions)
             .then(User.renderUsers)
     }

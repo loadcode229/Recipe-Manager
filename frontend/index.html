@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id='user-function-header'>
-
+        <h1>【﻿Ｒｅｃｉｐｅ　Ｍａｎａｇｅｒ】</h1>
     </div>
     <br>
     <h3 id='tag-line'>The virtual recipe assistant built for you and others in your house hold.</h3>
@@ -32,13 +32,15 @@
     <div class="container">
         <form class="add-recipe-form">
             <h3> Add a Recipe to your Recipe List:</h3>
-
-            <input type="text" name="title" value="" placeholder="Enter a recipe's title..." class="input-text">
-            <br>
-            <p><input type="text" name="cook_time" value="" placeholder="Enter a recipe cook time..." class="input-text">  minutes</p>
+            <label>Recipe Title:</label><br>
+            <input type="text" name="title" value="" placeholder="Enter a recipe's title..." class="input-text"><br><br>
+            <label>Cook Time:</label>
+            <p><input type="text" name="cook_time" value="" placeholder="Enter a recipe cook time..." class="input-text">  minutes</p><br>
+            <label>Prep Time:</label>
             <p><input type="text" name="prep_time" value="" placeholder="Enter a recipe prep time..." class="input-text">  minutes</p>
+            <label>Directions:</label><br>
             <textarea type="text" name="directions" value="" placeholder="Enter a recipe directions..." class="input-text"></textarea>
-            <br>
+            <br><br>
             <select id="select">
                 
             </select>
