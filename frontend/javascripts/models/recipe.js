@@ -2,7 +2,7 @@ class Recipe {
 
     static all = []
 
-    constructor(title, status='Incomplete', cook_time, prep_time, directions, id) {
+    constructor(title, status='', cook_time, prep_time, directions, id) {
         this.title = title
         this.status = status
         this.cook_time = cook_time
@@ -15,7 +15,7 @@ class Recipe {
     static postRecipe(recipeData) {
         let formData = {
             "title": recipeData.title.value,
-            "status": recipeData.status = 'Incomplete',
+            "status": recipeData.status = '',
             "cook_time": recipeData.cook_time.value,
             "prep_time": recipeData.prep_time.value,
             "directions": recipeData.directions.value,
@@ -62,17 +62,12 @@ class Recipe {
         likeBtn.innerText = 'Like'
         likeBtn.addEventListener('click', event => this.likeHandler(event, this))
 
-        let unlikeBtn = document.createElement('button')
-        unlikeBtn.setAttribute('class', 'unlike-recipe-btn')
-        unlikeBtn.innerText = 'Unlike'
-        unlikeBtn.addEventListener('click', event => this.unlikeHandler(event, this))
-
         let resetBtn = document.createElement('button')
         resetBtn.setAttribute('class', 'reset-recipe-btn')
         resetBtn.innerText = 'Reset'
         resetBtn.addEventListener('click', event => this.resetHandler(event, this))
 
-        if (p.innerHTML === 'Incomplete') {
+        if (p.innerHTML === '') {
             p.style.color = 'black'
             resetBtn.style.display = 'none'
         } else {
@@ -88,7 +83,7 @@ class Recipe {
         let divCard = document.createElement('div')
         divCard.setAttribute('class', 'card')
         divCard.setAttribute('id', `${this.id}`)
-        divCard.append(h2, h4, tbody, p, likeBtn, unlikeBtn, resetBtn, deleteBtn)
+        divCard.append(h2, h4, tbody, p, likeBtn, resetBtn, deleteBtn)
         recipeCollection.append(divCard)
     }
 
@@ -121,7 +116,7 @@ class Recipe {
         statusUpdate.innerHTML = 'Liked!'
         statusUpdate.style.color = 'green'
 
-        fetch(`${Api.RECIPES_URL}/${this.id}`), {
+        fetch(`${Api.RECIPES_URL}/${this.id}`, {
             method: "PATCH",
             headers: {
                 'Accept': 'application/json',
@@ -130,34 +125,7 @@ class Recipe {
             body: JSON.stringify({
                 'status': statusUpdate.textContent
             })
-        }
-        .then(parseJSON)
-        .then(newStatus => {
-            statusUpdate
         })
-    }
-
-    unlikeHandler() {
-        let cardIns = event.target.parentNode
-        cardIns.querySelector('.reset-recipe-btn').style.display = 'block'
-        event.preventDefault()
-
-        let toggleResetBtn = event.target.style.display = 'none'
-
-        let statusUpdate = event.target.previousElementSibling
-        statusUpdate.innerHTML = 'Not Liked!'
-        statusUpdate.style.color = 'red'
-
-        fetch(`${Api.RECIPES_URL}/${this.id}`), {
-            method: "PATCH",
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                'status': statusUpdate.textContent
-            })
-        }
         .then(parseJSON)
         .then(newStatus => {
             statusUpdate
@@ -166,14 +134,11 @@ class Recipe {
 
     resetHandler() {
         let resetStatus = event.target.previousElementSibling.previousElementSibling
-        resetStatus.innerHTML = 'Incomplete'
-        resetStatus.style.color = 'black'
+        resetStatus.innerHTML = ''
+        resetStatus.style.color = 'none'
     
         let toggleLikeBtn = event.target.previousElementSibling
         toggleLikeBtn.style.display = 'block'
-
-        let toggleUnlikeBtn = event.target.previousElementSibling
-        unlikeBtn.style.display = 'block'
     
         let toggleResetBtn = event.target.style.display = 'none'
         event.preventDefault()
