@@ -3,56 +3,56 @@ html {
 }
 
 body {
-    background: #1A3263;
+    background: #C96567;
     color: #E8E2DB;
 }
 
 .container {
-    box-shadow: 3px 4px #F5564E;
+    box-shadow: 3px 4px #644E5B;
     border-radius: 6px 16px;
     padding: 1rem;
     width: 420px;
     height: auto;
     display: none;
-    background: #F5564E;
+    background: #644E5B;
     opacity: .9;
-    color: #E8E2DB;
+    color: #97AABD;
     font-family: Georgia, serif;
 }
 
 #user-pop-up {
-    box-shadow: 3px 4px #F5564E;
+    box-shadow: 3px 4px #644E5B;
     border-radius: 6px 16px;
     padding: 1rem;
     width: 420px;
     height: auto;
     display: none;
-    background: #F5564E;
+    background: #644E5B;
     opacity: .9;
     margin: 1rem 2rem;
-    text-shadow: 1px .5px #F5564E;
-    color: #E8E2DB;
+    text-shadow: 1px .5px #644E5B;
+    color: #97AABD;
     font-family: Georgia, serif;
     
 }
 
 .user-selector {
-    box-shadow: 3px 4px #F5564E;
+    box-shadow: 3px 4px #644E5B;
     border-radius: 6px 16px;
     padding: 1rem;
     width: 420px;
     height: auto;
     display: none;
-    background: #F5564E;
+    background: #644E5B;
     opacity: .9;
     margin: 1rem 2rem;
-    text-shadow: .5px .5px #F5564E;
-    color: #E8E2DB;
+    text-shadow: .5px .5px #644E5B;
+    color: #97AABD;
     font-family: Georgia, serif;
 }
 
 .card {
-    box-shadow: 3px 4px #FAB95B;
+    box-shadow: 3px 4px #314455;
     border-radius: 15px 40px;
     text-align: center;
     border: #75736f solid 2px;
@@ -62,7 +62,7 @@ body {
     color: #75736f;
     display: inline-grid;
     margin: 1rem 2rem;
-    background-color: #FAB95B;
+    background-color: #314455;
     font-family: Georgia, serif;
 }
 
@@ -77,7 +77,7 @@ body {
 }
 
 .reset-recipe-btn {
-    background-color: #FAB95B;
+    background-color: #314455;
     border-radius: 3px 8px;
     color: #75736f;
     text-align: center;
@@ -91,9 +91,9 @@ body {
 }
 
 .like-recipe-btn {
-    background-color: #FAB95B;
+    background-color: #314455;
     border-radius: 3px 8px;
-    color: #75736f;
+    color: #97AABD;
     text-align: center;
     text-decoration: none;
     display: table;
@@ -105,9 +105,9 @@ body {
 }
 
 .delete-recipe-btn {
-    background-color: #FAB95B;
+    background-color: #314455;
     border-radius: 3px 8px;
-    color: #75736f;
+    color: #97AABD;
     text-align: center;
     text-decoration: none;
     display: table;
@@ -120,19 +120,19 @@ body {
 
 #add-new-user {
     border-radius: 3px 8px;
-    border: #E8E2DB solid 2px;
+    border: #97AABD solid 2px;
     font-size: 24px;
     height: auto;
     width: auto;
-    border: #F5564E;
-    background: #F5564E;
-    box-shadow: 3px 4px #E8E2DB;
+    border: #644E5B;
+    background: #644E5B;
+    box-shadow: 3px 4px #97AABD;
     padding: 12px 28px;
     margin-left: 50px;
     margin-top: 15px;
     margin-bottom: 30px;
     cursor: pointer;
-    color: #E8E2DB;
+    color: #97AABD;
     font-family: Georgia, serif;
 }
 
@@ -141,15 +141,15 @@ body {
     font-size: 24px;
     height: auto;
     width: auto;
-    border: #E8E2DB;
+    border: #97AABD;
     border: 2px;
-    background: #F5564E;
-    box-shadow: 3px 4px #E8E2DB;
+    background: #644E5B;
+    box-shadow: 3px 4px #97AABD;
     padding: 12px 28px;
     margin-left: 50px;
     margin-top: 15px;
     cursor: pointer;
-    color: #E8E2DB;
+    color: #97AABD;
     font-family: Georgia, serif;
 }
 
@@ -158,22 +158,22 @@ body {
     font-size: 24px;
     height: auto;
     width: auto;
-    border: #E8E2DB;
+    border: #97AABD;
     border: 2px;
-    background: #F5564E;
-    box-shadow: 3px 4px #E8E2DB;
+    background: #644E5B;
+    box-shadow: 3px 4px #97AABD;
     padding: 12px 28px;
     margin-left: 50px;
     margin-top: 20px;
     cursor: pointer;
-    color: #E8E2DB;
+    color: #97AABD;
     font-family: Georgia, serif;
 }
 
 #tag-line {
     text-align: center;
-    text-shadow: 2px 2px #1A3263;
-    color: #E8E2DB;
+    text-shadow: 2px 2px #C96567;
+    color: #97AABD;
     font-family: Georgia, serif;
     opacity: .5;
     font-size: 24px;
@@ -181,8 +181,8 @@ body {
 
 #user-recipe-list {
     text-align: center;
-    text-shadow: 2px 2px #1A3263;
-    color: #E8E2DB;
+    text-shadow: 2px 2px #C96567;
+    color: #97AABD;
     font-family: Georgia, serif;
     opacity: .5;
     font-size: 28px;
@@ -190,22 +190,22 @@ body {
 
 .submit-form {
     border-radius: 3px 8px;
-    color: #1A3263;
+    color: #C96567;
 }
 
 .submit {
     border-radius: 3px 8px;
-    color: #1A3263;
+    color: #C96567;
 }
 
 #select {
     border-radius: 3px 8px;
-    color: #1A3263;
+    color: #C96567;
 }
 
 #user-select {
     border-radius: 3px 8px;
-    color: #1A3263;
+    color: #C96567;
 }
 
 h2 {
