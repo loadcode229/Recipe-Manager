@@ -62,13 +62,18 @@ class Recipe {
         likeBtn.innerText = 'Like'
         likeBtn.addEventListener('click', event => this.likeHandler(event, this))
 
+        let unlikeBtn = document.createElement('button')
+        unlikeBtn.setAttribute('class', 'unlike-recipe-btn')
+        unlikeBtn.innerText = 'Unlike'
+        unlikeBtn.addEventListener('click', event => this.unlikeHandler(event, this))
+
         let resetBtn = document.createElement('button')
         resetBtn.setAttribute('class', 'reset-recipe-btn')
         resetBtn.innerText = 'Reset'
         resetBtn.addEventListener('click', event => this.resetHandler(event, this))
 
         if (p.innerHTML === 'Incomplete') {
-            p.style.color = 'red'
+            p.style.color = 'black'
             resetBtn.style.display = 'none'
         } else {
             p.style.color = 'green'
@@ -83,7 +88,7 @@ class Recipe {
         let divCard = document.createElement('div')
         divCard.setAttribute('class', 'card')
         divCard.setAttribute('id', `${this.id}`)
-        divCard.append(h2, h4, tbody, p, likeBtn, resetBtn, deleteBtn)
+        divCard.append(h2, h4, tbody, p, likeBtn, unlikeBtn, resetBtn, deleteBtn)
         recipeCollection.append(divCard)
     }
 
@@ -132,13 +137,43 @@ class Recipe {
         })
     }
 
+    unlikeHandler() {
+        let cardIns = event.target.parentNode
+        cardIns.querySelector('.reset-recipe-btn').style.display = 'block'
+        event.preventDefault()
+
+        let toggleResetBtn = event.target.style.display = 'none'
+
+        let statusUpdate = event.target.previousElementSibling
+        statusUpdate.innerHTML = 'Not Liked!'
+        statusUpdate.style.color = 'red'
+
+        fetch(`${Api.RECIPES_URL}/${this.id}`), {
+            method: "PATCH",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                'status': statusUpdate.textContent
+            })
+        }
+        .then(parseJSON)
+        .then(newStatus => {
+            statusUpdate
+        })
+    }
+
     resetHandler() {
         let resetStatus = event.target.previousElementSibling.previousElementSibling
         resetStatus.innerHTML = 'Incomplete'
-        resetStatus.style.color = 'red'
+        resetStatus.style.color = 'black'
     
         let toggleLikeBtn = event.target.previousElementSibling
         toggleLikeBtn.style.display = 'block'
+
+        let toggleUnlikeBtn = event.target.previousElementSibling
+        unlikeBtn.style.display = 'block'
     
         let toggleResetBtn = event.target.style.display = 'none'
         event.preventDefault()
