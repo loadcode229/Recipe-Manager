@@ -74,7 +74,6 @@ class Recipe {
             p.style.color = 'green'
             likeBtn.style.display = 'none'
         }
-
         let deleteBtn = document.createElement('button')
         deleteBtn.setAttribute('class', 'delete-recipe-btn')
         deleteBtn.innerText = 'Delete'

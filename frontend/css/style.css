@@ -3,88 +3,82 @@ html {
 }
 
 body {
-    background: #C96567;
-    color: #E8E2DB;
-    border: solid #314455 2px;
+  background-color: #202040;
+  color: #FFBD69;
+  border: solid #543864 2px;
 }
 
 .container {
-    box-shadow: 3px 4px #644E5B;
-    border-radius: 6px 16px;
-    padding: 1rem;
-    width: 420px;
-    height: auto;
-    display: none;
-    background: #644E5B;
-    opacity: .9;
-    color: #97AABD;
-    font-family: Georgia, serif;
+  box-shadow: 3px 4px #543864;
+  border-radius: 6px 16px;
+  padding: 1rem;
+  width: 420px;
+  height: auto;
+  display: none;
+  background:#543864;
+  opacity: .9;
+  color: #FFBD69;
+  font-family: Georgia, serif;
 }
 
 #user-pop-up {
-    box-shadow: 3px 4px #644E5B;
+    box-shadow: 3px 4px #543864;
     border-radius: 6px 16px;
     padding: 1rem;
     width: 420px;
     height: auto;
     display: none;
-    background: #644E5B;
+    background: #543864;
     opacity: .9;
     margin: 1rem 2rem;
-    text-shadow: 1px .5px #644E5B;
-    color: #97AABD;
+    color: #FFBD69;
     font-family: Georgia, serif;
-    
 }
 
 .user-selector {
-    box-shadow: 3px 4px #644E5B;
+    box-shadow: 3px 4px #543864;
     border-radius: 6px 16px;
     padding: 1rem;
     width: 420px;
     height: auto;
     display: none;
-    background: #644E5B;
+    background: #543864;
     opacity: .9;
     margin: 1rem 2rem;
-    text-shadow: .5px .5px #644E5B;
-    color: #97AABD;
+    color: #FFBD69;
     font-family: Georgia, serif;
 }
 
 .card {
-    box-shadow: 3px 4px #314455;
+    box-shadow: 3px 4px #FF6363;
     border-radius: 15px 40px;
     text-align: center;
-    border: #75736f solid 2px;
+    border: solid  2px;
     padding: 20px;
     width: 250px;
     height: 450px;
-    color: #75736f;
+    color: #543864;
     display: inline-grid;
     margin: 1rem 2rem;
-    background-color: #314455;
-    font-family: Georgia, serif;
+    background-color: #FF6363;
+    font-family: Georgia, serif; 
 }
 
 .recipe-status {
     font-size: larger;
     font-family: Georgia, serif;
 }
-
 .add-recipe-form {
     width: 80%;
     font-family: Georgia, serif;
 }
 
 .reset-recipe-btn {
-    background-color: #314455;
-    border-radius: 3px 8px;
-    color: #75736f;
+    background-color: #202040;
+    color: #FFBD69;
+    display: block;
     text-align: center;
     text-decoration: none;
-    display: table;
-    vertical-align: bottom;
     font-size: 14px;
     height: 50px;
     width: 240px;
@@ -92,13 +86,11 @@ body {
 }
 
 .like-recipe-btn {
-    background-color: #314455;
-    border-radius: 3px 8px;
-    color: #97AABD;
+    background-color: #202040;
+    color: #FFBD69;
+    display: block;
     text-align: center;
     text-decoration: none;
-    display: table;
-    vertical-align: bottom;
     font-size: 14px;
     height: 50px;
     width: 240px;
@@ -106,13 +98,11 @@ body {
 }
 
 .delete-recipe-btn {
-    background-color: #314455;
-    border-radius: 3px 8px;
-    color: #97AABD;
+    background-color: #202040;
+    color: #FFBD69;
+    display: block;
     text-align: center;
     text-decoration: none;
-    display: table;
-    vertical-align: bottom;
     font-size: 14px;
     height: 50px;
     width: 240px;
@@ -121,19 +111,19 @@ body {
 
 #add-new-user {
     border-radius: 3px 8px;
-    border: #97AABD solid 2px;
+    border: #FFBD69 solid 2px;
     font-size: 24px;
     height: auto;
     width: auto;
-    border: #644E5B;
-    background: #644E5B;
-    box-shadow: 3px 4px #97AABD;
+    border: #543864;
+    background: #543864;
+    box-shadow: 3px 4px #FFBD69;
     padding: 12px 28px;
     margin-left: 50px;
     margin-top: 15px;
     margin-bottom: 30px;
     cursor: pointer;
-    color: #97AABD;
+    color: #FFBD69;
     font-family: Georgia, serif;
 }
 
@@ -142,15 +132,15 @@ body {
     font-size: 24px;
     height: auto;
     width: auto;
-    border: #97AABD;
+    border: #FFBD69;
     border: 2px;
-    background: #644E5B;
-    box-shadow: 3px 4px #97AABD;
+    background: #543864;
+    box-shadow: 3px 4px #FFBD69;
     padding: 12px 28px;
     margin-left: 50px;
     margin-top: 15px;
     cursor: pointer;
-    color: #97AABD;
+    color: #FFBD69;
     font-family: Georgia, serif;
 }
 
@@ -159,22 +149,21 @@ body {
     font-size: 24px;
     height: auto;
     width: auto;
-    border: #97AABD;
+    border: #FFBD69;
     border: 2px;
-    background: #644E5B;
-    box-shadow: 3px 4px #97AABD;
+    background: #543864;
+    box-shadow: 3px 4px #FFBD69;
     padding: 12px 28px;
     margin-left: 50px;
     margin-top: 20px;
     cursor: pointer;
-    color: #97AABD;
+    color: #FFBD69;
     font-family: Georgia, serif;
 }
 
 #tag-line {
     text-align: center;
-    text-shadow: 2px 2px #C96567;
-    color: #314455;
+    color: #FFBD69;
     font-family: Georgia, serif;
     opacity: .9;
     font-size: 24px;
@@ -182,8 +171,7 @@ body {
 
 #user-recipe-list {
     text-align: center;
-    text-shadow: 2px 2px #C96567;
-    color: #314455;
+    color: #FFBD69;
     font-family: Georgia, serif;
     opacity: .9;
     font-size: 28px;
@@ -191,27 +179,31 @@ body {
 
 .submit-form {
     border-radius: 3px 8px;
-    color: #C96567;
+    background-color: #202040;
+    color: #FFBD69;
 }
 
 .submit {
     border-radius: 3px 8px;
-    color: #C96567;
+    background-color: #202040;
+    color: #FFBD69;
 }
 
 #select {
     border-radius: 3px 8px;
-    color: #C96567;
+    background-color: #202040;
+    color: #FFBD69;
 }
 
 #user-select {
     border-radius: 3px 8px;
-    color: #C96567;
+    background-color: #202040;
+    color: #FFBD69;
 }
 
 h1 {
     text-align: center;
-    color: #314455;
+    color: #FFBD69;
     text-decoration: underline;
 }
 
@@ -228,5 +220,5 @@ tbody {
 }
 
 #recipe-collection {
-    border: solid #314455 2px;
+    border: solid #FFBD69 2px;
 }
